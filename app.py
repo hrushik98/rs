@@ -8,7 +8,7 @@ from docx import Document
 import os
 from PIL import Image
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=st.secrets['openai_api_key'])
 
 def read_pdf(uploaded_file):
     pdf_reader = PyPDF2.PdfReader(io.BytesIO(uploaded_file.read()))
